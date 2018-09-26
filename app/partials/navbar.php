@@ -82,7 +82,7 @@
       <li class="subNavBarLi">
         <?php 
           if(!isset($_SESSION['user_data'])) echo '<a href="./login.php">Track My Orders</a>';
-          else echo '<a href="./catalog.php">Track My Orders</a>';
+          else echo '<a href="./view_orders.php">Track My Orders</a>';
         ?>
       </li>
       <li class="subNavBarLi">

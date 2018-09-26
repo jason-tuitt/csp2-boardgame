@@ -118,6 +118,13 @@ session_start();
 			if(event.target == event.currentTarget) {	
 				document.querySelector('#updateModal').style.opacity = "0";
 				setTimeout(() => {document.querySelector('#updateModal').style.display = "none"}, 300)
+				$('#inputstreet').val('');
+				$('#inputstreet').empty();
+				$('#selectregions').empty();
+				$('#selectprovinces').empty();
+				$('#selectmunicipalities').empty();
+				$('#selectbarangays').empty();
+				
 			}
 		})
 	})
@@ -405,6 +412,7 @@ session_start();
 			type: 'POST',
 			success: (data) => {
 				console.log(data);
+				window.location = './view_orders.php';
 			}
 		})
 	});
