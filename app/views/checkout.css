@@ -1,0 +1,177 @@
+#shippingAndPayment {
+	display: flex;
+	/*background-color: red;*/
+}
+
+#checkoutLeft {
+	flex:5;
+	display: flex;
+	flex-direction: column;
+}
+
+#checkoutRight {
+	flex:2;
+	display: flex;
+	flex-direction: column;
+}
+
+#paymentRadio {
+	display: flex;
+	flex-direction: row;
+	/*justify-content: stretch;*/
+	align-items: center;
+	align-content: center;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	margin: 5px 10px; 
+}
+
+#paymentRadio input {
+	flex: 1;
+}
+
+#checkoutLeft,
+#checkoutRight {
+	padding: 5px 10px 5px 20px;
+	margin: 10px;
+}
+
+td {
+	width: 15%;
+}
+
+table {
+	margin-bottom: 20px;
+}
+
+table *{
+	padding:15px;
+}
+
+img {
+	width: 120px;
+	height: 120px;
+}
+
+#orderItemsCheckout {
+	padding: 0 10px;
+	margin:0 auto;
+/*	display: flex;
+	justify-content: center;*/
+}
+
+.checkout-address {
+	padding: 20px;
+}
+
+input {
+	margin-bottom: 10px;
+}
+
+label.label-address {
+	width: 200px;
+}
+
+.update-address-button {
+	width: 200px;
+}
+
+/* MODAL */
+
+#updateModal {
+	width:100vw;
+	height:100vh;
+	background-color:rgba(0,0,0,.5);
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 10000;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.3s linear;
+	opacity: 0;
+}
+
+#updateForm {
+/*	width:500px;
+	height:500px;*/
+	background-color: white;
+	box-shadow: 0 4px 7px 2px;  
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+
+#updateForm:hover {
+	cursor: default;
+}
+
+.fa-times {
+	/*height: 100%;*/
+	padding: 10px;
+	transition: background-color 0.2s ease-out;
+}
+
+div.close-modal:hover,
+.fa-times:hover {
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: rgba(10,10,10,0.1)
+}
+
+#updateForm header,
+#updateForm main,
+#updateForm footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+#updateForm header,
+#updateForm footer {
+	width: 500px;
+}
+
+#updateForm header {
+	justify-content: space-between;
+}
+
+#updateForm footer button {
+	margin: 5px 8px;
+}
+
+#updateForm main {
+	width: 100%;
+	flex-direction: column;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+	margin: 10px;
+	padding: 5px;
+}
+
+select.modal-only,
+input.modal-only {
+	margin: 10px 15px;
+	padding: 5px;
+	/*width: 65%;*/
+}
+
+input[type="button"].modal-only {
+	width: 40%;
+}
+
+.modal-input-div {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	width:90%;
+}

@@ -17,6 +17,9 @@ $password = $_POST['inputPassword'];
 
 		if ($row['password'] == $password) {
 			$_SESSION['user_data'] = $row;
+			$_SESSION['cartQuantity'] = 0;
+			$_SESSION['cart'] = array();
+
 			header('Location: ../views/catalog.php' );
 		} else {
 			$_SESSION['login_message'] = 'Incorrect Password';

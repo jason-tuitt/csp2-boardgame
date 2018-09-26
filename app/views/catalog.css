@@ -1,3 +1,11 @@
+#idHolderHidden {
+	display: none;
+}
+
+.item-qty {
+	width: 50px;
+	margin-left: 10px;
+}
 
 #catalogContainer {
 	display: flex;
@@ -13,11 +21,12 @@
 
 #rightSide {
 	display: flex;
-	flex:3;
+	flex:5;
 	width:66%;
 	padding: 0 10px;
 	flex-direction: column;
 	align-items: center;
+	margin-left: 200px;
 }
 
 .list-group {
@@ -27,6 +36,7 @@
 #itemsForSale {
 	display: flex;
 	flex-wrap: wrap;
+	min-height: 40vh;
 }
 
 #cardContainer {
@@ -44,3 +54,50 @@ img {
 	height:40vh;
 	width:70vw;
 }*/
+
+#backdropModal {
+	display: none;
+}
+
+.backdrop {
+	position: fixed !important;
+	height:100vh !important;
+	width: 100vw !important;
+	z-index: 100 !important;
+	background-color: rgba(0,0,0,0.3) !important;
+}
+
+#addedToCartModal {
+/*	width: 300px;
+	height: 200px;*/
+	margin: 0 auto;
+	background-color: red;
+	transform: translateY(-200%);
+	transition: transform 0.5 ease-out;
+}
+
+.addedToCartCenter {
+	transform: translateY(0);
+	z-index: 200;
+}
+
+.selected-filter {
+	background-color: red;
+}
+
+#filterbarContainer .list-group-item:hover,
+#clearFilter:hover {
+	cursor: pointer;
+}
+
+#filterbarContainer {
+	position: fixed;
+	left:0;
+	padding: 0 10px;
+	width:20vw;
+	transition: transform 0.8s ease-out;
+}
+
+.filter-move-up {
+	transform: translateY(-13%);
+}

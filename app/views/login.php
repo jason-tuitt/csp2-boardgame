@@ -7,13 +7,13 @@
 	<link rel='stylesheet' type='text/css' href='./login.css'>
 </head>
 <body>
-	
+	<?php include_once '../partials/navbar.php'; ?>
 	<?php 
 		if(isset($_SESSION['user_data'])) {
 			header('Location: ./catalog.php');
 		}
 	 ?>
-
+	 <div class="appViewBox">
 
 		<h1>Board Game Store - Login</h1>
 
@@ -44,7 +44,7 @@
 			</div>
 			
 		</div>
-
+	</div>
 
 <?php 
 	include_once '../partials/footer.php';
