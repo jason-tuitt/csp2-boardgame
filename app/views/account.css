@@ -1,0 +1,228 @@
+#account-appViewBox {
+	display: flex;
+	padding: 5px 100px;
+}
+
+#leftAccount {
+	flex: 1;
+}
+
+#rightAccount {
+	flex: 4;
+	overflow: hidden !important;
+}
+
+.accountButton {
+	margin: 0 15px;
+	padding: 5px;
+	/*width: 80px;*/
+}
+
+#leftAccount,
+#rightAccount {
+	padding: 10px;
+	margin: 10px 5px;
+	
+}
+
+#accountLoadModal {
+	display: none;
+}
+
+.showLoadModal {
+	display: absolute !important;
+}
+
+div[id^="formgroup"] input {
+	/*outline: none !important;*/
+	pointer-events: none;
+}
+
+div.accountInputButton {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+div.accountInputButton > input {
+	flex: 5;
+}
+
+div.accountInputButton > button {
+	flex: 1 0 90px;
+}
+
+#accountChangePassword {
+/*	height: 0;*/
+/*	position: absolute;
+	right:-999em;*/
+	display: none;
+	flex-direction: column;
+	opacity: 0;
+	width:50%;
+	margin: 20px 0 20px 5%;
+	transform: translateX(200%);
+	transition: transform 0.5s ease-out;
+	transition: opacity 0.5s ease-in;	
+	/*transition: z-index 1 linear;*/
+	z-index: -1;
+	overflow: hidden;
+}
+
+.accountChangePasswordShow {
+	transform: none !important;
+	display: flex !important;
+	position: static !important;
+	z-index: 0;
+	opacity: 1 !important;
+}
+
+#changePasswordSpan {
+	margin-left: 20px;
+}
+
+#accountChangePassword input {
+	margin-bottom: 8px;
+}
+
+#changePasswordButtonContainer {
+	display: flex;
+}
+
+#changePasswordButtonContainer * {
+	margin: 5px 15px;
+	padding: 5px;
+	flex: 1;
+}
+
+span[id^="error"] {
+	margin-left: 40px;
+	/*color: red;*/
+	font-weight: 600;
+}
+
+
+#leftAccount .account-default-info {
+	padding: 0;
+	margin: 0;
+}
+
+#leftAccount .left-default-edit {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+#leftAccount [id^="accountDefault"] {
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+#modalLoad {
+	width:100vw;
+	height:100%;
+	background-color:rgba(0,0,0,.5);
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*transition: opacity 0.3s linear;*/
+	opacity: 1;
+}
+
+
+/*ADDRESS*/
+
+#account-appViewBox .add-address-input-div label {
+	text-align: center;
+	width:15vw;
+}
+
+#account-appViewBox .add-address-input-div input, 
+#account-appViewBox .add-address-input-div select {
+	display: inline-block !important;
+	margin:10px 5px;
+	outline: none !important;
+}
+
+#account-appViewBox .add-address-input-div {
+	display: flex;
+}
+
+#account-appViewBox #addAddress {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#account-appViewBox #addAddress footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+#account-appViewBox .add-address-input-div input:focus, 
+#account-appViewBox .add-address-input-div select:focus {
+	outline: none !important;
+}
+
+#account-appViewBox p[id^="edit"]:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#account-appViewBox #getUserProfile:hover {
+	cursor: pointer;
+	text-decoration: underline;
+} 
+
+#account-appViewBox #rightAccount [id^="listCurrent"] {
+	margin: 5px;
+	/*border-bottom: 2px solid lightgrey;*/
+}
+
+#account-appViewBox #rightAccount .listCurrentTypeSub:first-of-type {
+	border-top: 1px solid lightgrey;
+}
+
+#account-appViewBox #rightAccount .listCurrentTypeSub {
+	display: flex;
+	/*border-top: 1px solid lightgrey;*/
+	border-bottom: 1px solid lightgrey;
+}
+
+#account-appViewBox #rightAccount .listCurrentTypeSub .listCurrentTypeData {
+	width:60%;
+	max-width: 60%;
+}
+
+#account-appViewBox #rightAccount .listCurrentTypeSub div {
+	margin: 2px 5px;
+	/*padding: 5px;*/
+}
+
+#account-appViewBox #rightAccount .listCurrentTypeSub .listCurrentTypeDefault {
+	flex:1;
+	margin: 2px 5px;
+	display: flex;
+	align-items: center;
+	/*padding: 5px;*/
+}
+
+#account-appViewBox #rightAccount #addAddressFooter {
+	display: flex;
+	justify-content: center;
+}
+
+#account-appViewBox #rightAccount #listCurrentshipping div[id^="listCurrent"],
+#account-appViewBox #rightAccount #listCurrentbilling div[id^="listCurrent"] {
+
+}
+
+@media only screen and (max-width: 1100px) {
+		#account-appViewBox .listCurrentTypeSub {
+			flex-wrap: wrap;
+		}
+	}

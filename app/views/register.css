@@ -1,5 +1,5 @@
 label {
-	width: 200px;
+	/*width: 200px;*/
 }
 
 form {
@@ -7,9 +7,13 @@ form {
 }
 
 #registerFormContainer {
-	padding: 20px;
+	padding: 10px;
 	display: flex;
 	align-items: center;
 	width: 100%;
 	flex-flow: column;
 }
+/*
+#registerFormContainer input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px whitesmoke inset;
+}*/

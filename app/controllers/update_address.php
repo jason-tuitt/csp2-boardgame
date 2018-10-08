@@ -2,19 +2,21 @@
 	require_once('./connect.php');
 	session_start();
 
+	$address_id = $_POST['address_id'];
+
 	$address_type_id = $_POST['address_type_id'];
 	$house_num_others = $_POST['house_num_others'];
 	$region_code = $_POST['region_code'];
 	$region_province_code = $_POST['region_province_code'];
 	$city_municipality_code = $_POST['city_municipality_code'];
 	$barangay_id = $_POST['barangay_id'];
-	$default = 1;
+	// $default = 1;
 
 	// echo $address_type_id, $house_num_others, $region_code, $region_province_code, $city_municipality_code, $barangay_id;
 
 	$id = $_SESSION['user_data']['id'];
 
-	$sql = "UPDATE addresses SET house_num_others = '$house_num_others', region_code = '$region_code', region_province_code = '$region_province_code', city_municipality_code = '$city_municipality_code', barangay_id = $barangay_id WHERE user_id = $id AND address_type_id = $address_type_id";
+	$sql = "UPDATE addresses SET house_num_others = '$house_num_others', region_code = '$region_code', region_province_code = '$region_province_code', city_municipality_code = '$city_municipality_code', barangay_id = $barangay_id, address_type_id = $address_type_id WHERE id = $address_id";
 
 	$result = mysqli_query($conn, $sql);
 

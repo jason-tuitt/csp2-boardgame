@@ -1,0 +1,93 @@
+#adminUpdateModal,
+#adminAddModal {
+	width:100vw;
+	height:100vh;
+	background-color:rgba(0,0,0,.5);
+	position: absolute;
+	/*top:0;*/
+	left: 0;
+	top:0;
+	z-index: 10000;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.3s linear;
+	opacity: 0;
+}
+
+#adminUpdateModalForm,
+#adminAddModalForm {
+/*	width:500px;
+	height:500px;*/
+	background-color: white;
+	box-shadow: 0 4px 7px 2px;  
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+#adminUpdateModalForm main,
+#adminAddModalForm main  {
+	width:90%;
+}
+
+#adminUpdateModalForm .admin-item-input-div,
+#adminAddModalForm .admin-item-input-div  {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 10px 0;
+	/*flex-direction: column;*/
+}
+
+#adminUpdateModalForm .admin-item-input-div-long,
+#adminAddModalForm .admin-item-input-div-long  {
+	flex-direction: column !important;
+}
+
+#adminUpdateModalForm .admin-item-input-div input,
+#adminAddModalForm .admin-item-input-div input {
+	/*width:100px;*/
+	flex:5;
+}
+#adminUpdateModalForm .admin-item-input-div label,
+#adminAddModalForm .admin-item-input-div label  {
+	/*width:180px;*/
+	text-align: center;
+	flex:1;
+	margin: 0 10px 0 5px;
+}
+
+#adminUpdateModalForm:hover,
+#adminAddModalForm:hover  {
+	cursor: default;
+}
+
+#adminUpdateModalForm input[type=number]::-webkit-inner-spin-button, 
+#adminUpdateModalForm input[type=number]::-webkit-outer-spin-button,
+#adminAddModalForm input[type=number]::-webkit-inner-spin-button, 
+#adminAddModalForm input[type=number]::-webkit-outer-spin-button  { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#adminUpdateModalForm .upload-image-container input,
+#adminAddModalForm .upload-image-container input  {
+	flex:1 !important;
+}
+#adminUpdateModalForm .upload-image-container img,
+#adminAddModalForm .upload-image-container img  {
+	flex:2;
+}
+
+#adminUpdateModalForm .upload-image-container,
+#adminAddModalForm .upload-image-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	width:80%;
+	margin: 0 auto;
+	padding: 6px 12px;
+	/*align-content: center;*/
+}

@@ -6,10 +6,14 @@
 #loginForm {
 	margin-top: 30px;
 	width: 35vw;
-	/*background-color: red;*/
-	border:5px solid black;
+	background-color: #d3d3d329;
+	border:1px solid lightgrey;
+	box-shadow: 1px 0px 1px 1px;
 	display: flex;
 	flex-direction: column;
+	padding: 20px 0;
+	/*color:white;*/
+	border-radius: 5px;
 }
 
 form {
@@ -19,6 +23,7 @@ form {
 
 }
 
+
 #loginForm div {
 	width: 80%;
 	display: flex;
@@ -26,13 +31,28 @@ form {
 }
 
 #loginForm div label {
-	width: 150px;
+	width: 100px;
 }
 #loginForm div input {
-	width: 250px;
+	width: 270px;
 }
 
 #loginForm button {
-	margin: 5px 0;
-	width: 30%;
+	margin:15px 20px;
+	/*width: 50%;*/
+}
+
+.form-group-login {
+	display: flex;
+	justify-content: center;
+}
+
+#loginForm input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px whitesmoke inset;
+}
+
+#loginForm .form-group-login a:active,
+#loginForm .form-group-login a:link,
+#loginForm .form-group-login a:visited {
+	color:black;
 }

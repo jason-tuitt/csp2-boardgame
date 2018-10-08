@@ -1,0 +1,19 @@
+#wishlistApp {
+	display: flex;
+	justify-content: center;
+}
+
+#wishlistApp div {
+	display: flex;
+	justify-content: center;
+}
+
+#wishlistTable tr {
+	padding:8px 5px;
+	margin:8px 5px;
+}
+
+#wishlistTable td {
+	padding: 8px;
+	text-align: center;
+}

@@ -1,10 +1,31 @@
-* {
+#landingAppViewBox {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-img {
+/*img {
 	width: 100%;
 	opacity: 0.9;
+}*/
+
+#landingPage{
+	/*background-image: url("./assets/image/landing1.jpg");*/
+	/*background-size: cover;*/
+	background: url(../image/landing1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#landingPage {
+	display: flex;
+}
+
+#landingPage .landing {
+	padding:150px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
 }

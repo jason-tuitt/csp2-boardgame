@@ -1,0 +1,72 @@
+#productApp {
+	display: flex;
+	margin-top: 50px;
+}
+
+
+#productContainerLeft,
+#productContainerRight {
+	flex: 1;
+	margin: 5px 30px;
+}
+
+#productContainerLeft img {
+	width:320px;
+	height:320px;
+}
+
+#productContainerLeft {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#productApp li {
+	list-style: none;
+}
+
+ul#price-availability {
+	display: flex;
+}
+
+ul#age-players-averagetime {
+	display: flex;
+}
+
+ul#rating-wishlist-share {
+	display: flex;
+}
+
+#productApp #productQtyField {
+	display: flex;
+	align-items: center;
+}
+
+#productApp #productButtonField {
+	display:flex;
+}
+
+#productApp #productQtyField div, 
+#productApp #productButtonField div {
+	margin: 5px 20px;
+}
+
+#productApp li,
+#productApp p,
+#productApp #productQtyField,
+#productApp #productButtonField {
+	margin: 5px 20px;
+}
+
+#productApp p {
+	padding: 20px 0;
+}
+
+#productApp p {
+	width:75%;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+}
+
+#productApp i {
+	margin: 0 10px;
+}

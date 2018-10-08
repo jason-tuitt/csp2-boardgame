@@ -14,9 +14,9 @@
 	flex-wrap: wrap;
 }
 
-#filterbarContainer {
-	flex:1;
-	width:33%;
+.carousel .carousel-inner img {
+	width: 100%;
+	height: 650px;
 }
 
 #rightSide {
@@ -26,8 +26,26 @@
 	padding: 0 10px;
 	flex-direction: column;
 	align-items: center;
-	margin-left: 200px;
+	/*margin-left: 200px;*/
 }
+
+#rightSide #filterToolbar {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#rightSide #filterToolbar button {
+	border: none;
+	background-color: white;
+	margin: 2px 6px 10px 3px;
+	outline: none;
+}
+
+#rightSide #filterToolbar button:hover {
+	cursor: pointer;
+}
+
 
 .list-group {
 	margin-bottom: 10px;
@@ -39,50 +57,21 @@
 	min-height: 40vh;
 }
 
-#cardContainer {
-	width: 33%;
-	padding:5px;
+#rightSide {
+	padding-left: 20vw;
 }
-/*
-.carousel-item {
-	height:600px;
-	width:70vw;
-	
-}
-
-img {
-	height:40vh;
-	width:70vw;
-}*/
 
 #backdropModal {
 	display: none;
 }
 
-.backdrop {
-	position: fixed !important;
-	height:100vh !important;
-	width: 100vw !important;
-	z-index: 100 !important;
-	background-color: rgba(0,0,0,0.3) !important;
-}
-
-#addedToCartModal {
-/*	width: 300px;
-	height: 200px;*/
-	margin: 0 auto;
-	background-color: red;
-	transform: translateY(-200%);
-	transition: transform 0.5 ease-out;
-}
-
-.addedToCartCenter {
-	transform: translateY(0);
-	z-index: 200;
-}
+/* FILTER LIST */
 
 .selected-filter {
-	background-color: red;
+	background-color: #000000c9;
+	color:white;
+	margin-left: 40px; 
+	margin-right: 40px; 
 }
 
 #filterbarContainer .list-group-item:hover,
@@ -93,11 +82,167 @@ img {
 #filterbarContainer {
 	position: fixed;
 	left:0;
-	padding: 0 10px;
-	width:20vw;
+	padding: 5 15px;
+	display: flex;
 	transition: transform 0.8s ease-out;
+	flex:1;
+	width:20%;
 }
 
 .filter-move-up {
-	transform: translateY(-13%);
+	transform: translateY(-15%);
+}
+
+#filterdiv {
+/*	position: fixed;
+	left: 0;*/
+	display: flex;
+	flex-direction: column;
+	width:20vw;
+	/*max-width:25vw;*/
+	/*width: 100%;*/
+	/*width: 16vw;*/
+	margin: 5px 10px;
+	transition: transform 0.8s ease-out;
+	/*max-width: 15vw;*/
+}
+
+
+#filterdiv .list-group-item {
+	text-align: center;
+	transition: margin 0.4s ease-out;
+	/*width: 100%;*/
+}
+
+#filterdiv p {
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* END */
+
+
+.addedToCartCenter {
+	transform: translateY(0);
+	z-index: 200;
+}
+
+.cardContainer button {
+	text-align: center;
+	margin: 2px 5px;
+	width:100%;
+}
+
+
+.cardContainer button:focus {
+	/*outline: none;*/
+	box-shadow: none;
+}
+
+.cardContainer {
+	/*width:50%;*/
+	/*min-width:50%;*/
+	padding:5px;
+	display: flex;
+	flex:1;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+	.cardContainer {
+		/*width: 25% !important;*/
+		min-width: 25%;
+		max-width: 25%;
+		padding:5px;
+		flex:1;
+	}
+	.cardContainer .card {
+		min-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.cardContainer {
+		flex:1;
+		/*width: 20% !important;*/
+		min-width: 20%;
+		max-width: 20%;
+		padding:5px;
+	}	
+	.cardContainer .card {
+		min-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.cardContainer .card-body div i {
+		display: none;
+	}
+}
+
+
+.cardContainer .catalog-item-desc {
+	display: none;
+}
+
+
+.cardContainer .card {
+	padding: 20px;
+	height: 100%;
+}
+
+.cardContainer img {
+	/*padding: 30px;*/
+	width:100%;
+	height:200px;
+	/*height:50%;*/
+}
+
+.cardContainer .card-body .catalog-buttons-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.cardContainer .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.cardContainer h5, 
+.cardContainer h6 {
+	text-align: center;
+} 
+
+.cardContainer .card-body div.catalog-buttons-container {
+	display: flex;
+	justify-content: center;
+}
+
+.cardContainer .card {
+	border-radius: 10px;
+	transition: transform 0.3s ease-in;
+}
+
+.cardContainer .card:hover {
+	transform: translateY(-3px);
+	cursor: pointer;
+	background-color: #00000008;
+}
+
+/* LIST */
+
+.itemsForSale-list {
+	flex-direction: column !important;
+	flex-wrap: nowrap !important;
+	background-color: red;
+}
+
+.cardContainer-list {
+	flex-direction: row !important;
+	max-width: 100% !important;
 }

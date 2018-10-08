@@ -1,0 +1,58 @@
+#adminItemsApp #adminCompleteItems img {
+ 	height:220px;
+ 	width: 220px;
+}
+#adminItemsApp .adminItemContainer {
+	width: 75vw;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: flex;
+}
+
+
+#adminItemsApp .adminItemContainer .adminItemContainerLeft {
+	display: flex;
+	justify-content: center;
+	flex:1;
+}
+
+#adminItemsApp .adminItemContainer .adminItemContainerLeft div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#adminItemsApp .adminItemContainer .adminItemContainerRight {
+	flex:3;
+}
+
+#adminCompleteItems .adminItemContainer .adminItemContainerRight [class^="admin-"] {
+	display: flex;
+	margin: 10px; 
+}
+
+#adminCompleteItems .adminItemContainer .adminItemContainerRight [class^="admin-"] p {
+	margin: 2px 7px;
+	flex:1;
+}
+
+#adminCompleteItems .adminItemContainer .adminItemContainerRight,
+#adminCompleteItems .adminItemContainer .adminItemContainerRight {
+	padding: 10px;
+}
+
+#adminItemsApp .adminItemContainer {
+	border-bottom: 1px solid lightgrey;
+}
+
+.admin-update-button {
+	display: flex;
+	justify-content: center;
+}
+
+
+/*#adminItemsApp div.adminItemContainer:first-of-type {
+	border-bottom: 1px solid lightgrey;
+}*/

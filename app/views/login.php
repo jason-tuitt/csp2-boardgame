@@ -22,24 +22,30 @@
 				<div id="loginForm">
 					<form method="POST" action="../controllers/authenticate.php">
 						<h2>Login</h2>
-						<div>
+						<div class="form-group-login">
 							<label>Username</label>
-							<input type="text" name="inputUsername">
+							<input class="form-control" type="text" name="inputUsername">
 						</div>
-						<div>
+						<div class="form-group-login">
 							<label>Password</label>
-							<input type="password" name="inputPassword">
+							<input class="form-control" type="password" name="inputPassword">
 						</div>
-						<button type="submit" class="btn btn-primary">Login</button>
-					</form>
-				</div>
-				<div id="loginMessage">
-					<?php 
-					if(isset($_SESSION['login_message'])) {
-						echo $_SESSION['login_message'];
-						unset($_SESSION['login_message']);
-					}
-					 ?>
+						<div id="loginMessage">
+							<?php 
+							if(isset($_SESSION['login_message'])) {
+								echo $_SESSION['login_message'];
+								unset($_SESSION['login_message']);
+							}
+							 ?>
+						</div>
+						<div class="form-group-login">
+							<button type="submit" class="btn btn-outline-dark">Login</button>
+							<button type="button" class="btn btn-outline-dark">Forgot Password</button>
+						</div>
+						<div class="form-group-login">
+							<a href="./register.php"><p>No account? Register here</p></a>
+						</div>	
+					</form>	
 				</div>		
 			</div>
 			
