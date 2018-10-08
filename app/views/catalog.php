@@ -25,6 +25,9 @@
 	</script>
 </head>
 <body onscroll="adjustHeight()">
+	<script type="text/javascript">
+		// document.body.className += 'fade-out'
+	</script>
 	<?php include_once '../partials/navbar.php'; ?>
 	
 	<div class="appViewBox">
@@ -102,7 +105,7 @@
 												echo "<button onClick=event.stopPropagation();location.href='./login.php' class='btn btn-outline-dark'>Add To Cart <i class='fas fa-shopping-cart'></i></button>";
 											};
 
-											echo "<button onClick=event.stopPropagation();addToWishlist(".$row['id'].")  class='btn btn-outline-danger'> Wishlist <i class='far fa-heart'></i></button></div>";
+											echo "<button id='wishlistButton".$row['id']."' onClick=event.stopPropagation();addToWishlist(".$row['id'].") class='btn btn-danger'> Wishlist <i class='far fa-heart'></i></button></div>";
 									     echo "</div>
 									</div>
 								</div>";  
@@ -189,7 +192,7 @@
 	const generate_cards = (dataFiltered, login) => {
 		for (let key in dataFiltered) {
 					$('#itemsForSale').append(`
-						<div class='cardContainer'>
+						<div class='cardContainer cardContainerBlank'>
 							<div class='card' id='${dataFiltered[key]['id']}'>
 								<img class='card-img-top' src="${dataFiltered[key]['item_image']}" alt='Card image cap' id='${dataFiltered[key]['id']}'>
 								<div class='card-body' id='${dataFiltered[key]['id']}'>
@@ -200,13 +203,16 @@
 										? `<div class='catalog-buttons-container'><button onClick=event.stopPropagation();addToCart(${dataFiltered[key]['id']}) class='btn btn-outline-dark'>Add To Cart <i class='fas fa-shopping-cart'></i></button>`
 										: `<div class='catalog-buttons-container'><button onClick=event.stopPropagation();location.href='./login.php' class='btn btn-outline-dark'>Add To Cart <i class='fas fa-shopping-cart'></i></button>`	
 									}
-									<button onClick=event.stopPropagation();addToWishlist(${dataFiltered[key]['id']})  class='btn btn-outline-danger'> Wishlist <i class='far fa-heart'></i></button></div>
+									<button id='wishlistButton${dataFiltered[key]['id']}' onClick=event.stopPropagation();addToWishlist(${dataFiltered[key]['id']})  class='btn btn-outline-danger'> Wishlist <i class='far fa-heart'></i></button></div>
 								</div>
 							</div>
 					</div>`)
+					document.querySelectorAll('.cardContainer').forEach(d => {
+						d.classList.remove('cardContainerBlank');
+					})
 				}
 		addListenerToCards();
-		addGridListToCards();
+		// addGridListToCards();
 	}
 
 	const addToCart = (id) => {
@@ -223,6 +229,7 @@
 	}
 
 	const addToWishlist = (id) => {
+
 		$.ajax({
 			url:'../controllers/add_wishlist.php',
 			data:{id:id},
@@ -333,7 +340,7 @@
 	}
 
 	
-
+	// window.onload = function () { document.body.className = ""; }
 
 </script>
 

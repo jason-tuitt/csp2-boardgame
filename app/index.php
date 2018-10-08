@@ -2,11 +2,36 @@
 	include_once "./partials/header.php";
 	include_once "./partials/navbar.php";
 ?>
-
 	<link rel="stylesheet" type="text/css" href="./assets/css/landing.css">
+	<style type="text/css">
+		#landingAppViewBox {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		#landingPage{
+			/*background-image: url("./assets/image/landing1.jpg");*/
+			/*background-size: cover;*/
+			background-image: url("./assets/image/landing1.jpg");
+		    background-repeat: no-repeat;
+		    background-size: 100% 100%;
+		    display: flex;
+		    /*background-color: red;*/
+		}
+
+		#landingPage .landing {
+			padding:150px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: center;
+			flex-direction: column;
+		}
+	</style>
+
 </head>
 <body>
-
 	<div class="appViewBox" id="landingAppViewBox" style="margin-top: 80px;">
 		<div id="landingPage" style="width: 100%; min-height: 120vh">
 			<div class="landing">
@@ -21,6 +46,9 @@
 
 	<script>
 		document.querySelector('#navleft a').setAttribute('href', '#');
+		document.querySelectorAll('.subNavBarLi a').forEach(a => {
+			a.setAttribute('href', './views/login.php');
+		})
 	</script>
 
 <?php 

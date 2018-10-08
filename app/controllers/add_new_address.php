@@ -4,8 +4,6 @@
 
 	$id = $_SESSION['user_data']['id'];
 
-	// $address_id = $_POST['address_id'];
-
 	$address_type_id = $_POST['address_type_id'];
 	$house_num_others = $_POST['house_num_others'];
 	$region_code = $_POST['region_code'];

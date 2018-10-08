@@ -148,6 +148,8 @@
 	flex:1;
 	flex-direction: column;
 	flex-wrap: wrap;
+	opacity: 1;
+	transition: opacity 1s ease-out;
 }
 
 @media only screen and (min-width: 600px) {
@@ -246,3 +248,9 @@
 	flex-direction: row !important;
 	max-width: 100% !important;
 }
+
+.cardContainerBlank {
+	opacity: 0 !important;
+	transition: opacity 1s ease-out;
+}
+

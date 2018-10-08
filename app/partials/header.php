@@ -10,6 +10,9 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Cabin|Josefin+Sans|Raleway|Source+Sans+Pro|Titillium+Web" rel="stylesheet">
 
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+
 	<!-- JQEUERY -->
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 

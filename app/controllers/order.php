@@ -66,7 +66,7 @@ require '../vendor/autoload.php';
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
 $customer_email = 'jason.d.delatorre@gmail.com';
-$subject = 'Bored Games - Order Confirmation';
+$subject = 'The Board Gamer PH - Order Confirmation';
 $body = '<h3>'. $referenceNumber .'</h3>';
 
 try {
@@ -75,13 +75,13 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'boredgamesph.capstone@gmail.com';                 // SMTP username
+    $mail->Username = 'theboredgamerph@gmail.com';                 // SMTP username
     $mail->Password = 'tu!tt123';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('boredgamesph.capstone@gmail.com', 'Bored Staff');
+    $mail->setFrom('theboredgamerph@gmail.com', 'Bored Staff');
     $mail->addAddress($customer_email);     
 
     //Content

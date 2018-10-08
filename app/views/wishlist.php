@@ -85,6 +85,7 @@
 				data:{id:id},
 				type:'POST',
 				success: (data) => {
+					console.log(data)
 					const d = JSON.parse(data);
 					const wishlistQty = document.querySelector('#wishlistQuantity')
 					wishlistQty.textContent = d;

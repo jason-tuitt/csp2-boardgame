@@ -6,11 +6,6 @@
 
 	$duplicate = false;
 
-	// var_dump(array('id' => $id, 'qty' => $qty));
-	// var_dump($id, $qty);
-
-	// $_SESSION['datatrial'] = $data;
-
 	foreach($_SESSION['cart'] as $key => $cart_item) {
 		if ($cart_item['id'] == $id) {
 			$duplicate = true;

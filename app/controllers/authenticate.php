@@ -13,7 +13,6 @@ $password = $_POST['inputPassword'];
 
 	$result = mysqli_query($conn, $sql);
 
-
 	if ( mysqli_num_rows($result) > 0) {
 		$row = mysqli_fetch_assoc($result);
 		if (password_verify($password, $row['password'])) {
@@ -26,6 +25,17 @@ $password = $_POST['inputPassword'];
 			if ($row['roles_id'] == 2) {
 				$_SESSION['admin'] = 1;
 			}
+
+			$user_id = $_SESSION['user_data']['id'];
+
+			$sql_count = "SELECT count(*) from wishlists where user_id = $user_id";
+			$result_count = mysqli_query($conn, $sql_count);
+			$row = mysqli_fetch_assoc($result_count);
+
+			$wq = (int)$row["count(*)"];
+
+			$_SESSION['wishlistQuantity'] = $wq;
+
 
 			header('Location: ../views/catalog.php' );
 		} else {
